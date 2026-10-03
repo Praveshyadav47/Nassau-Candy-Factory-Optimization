@@ -1,0 +1,9 @@
+Product Name,Current_Avg_Lead_Time,Total_Orders,Total_Sales,Total_Profit,Best_Region,Best_Avg_Lead_Time,Best_Region_Orders,Lead_Time_Reduction_Days,Lead_Time_Reduction_%,Potential_Impact,Confidence Score,Recommendation
+Wonka Gum,1307.101490250197,118,597.5,310.7,Interior,1260.2068965517242,29,46.89459369847282,3.59,Potential Improvement,23.599999999999998,Low-Confidence Scenario
+Lickable Wallpaper,1346.6789915966388,68,5700.0,2850.0,Pacific,1305.5294117647059,34,41.1495798319329,3.06,Potential Improvement,13.600000000000001,Low-Confidence Scenario
+Wonka Bar - Nutty Crunch Surprise,1329.3336362014143,1529,23574.95,16819.95,Pacific,1304.4458041958042,483,24.887832005610107,1.87,Potential Improvement,100.0,Strong Scenario
+Wonka Bar - Milk Chocolate,1314.2638816100248,1768,26867.75,17443.37,Gulf,1289.7327327327328,281,24.531148877292026,1.87,Potential Improvement,100.0,Strong Scenario
+Kazookles,1291.2873873873873,65,825.5,63.5,Atlantic,1273.1081081081081,36,18.17927927927917,1.41,Potential Improvement,13.0,Low-Confidence Scenario
+Wonka Bar -Scrumdiddlyumptious,1320.2767956586101,1704,27874.8,19357.5,Atlantic,1305.370786516854,513,14.906009141756158,1.13,Potential Improvement,100.0,Strong Scenario
+Wonka Bar - Triple Dazzle Caramel,1325.179124410225,1677,28485.0,18610.199999999997,Interior,1316.3348115299334,377,8.844312880291682,0.67,Potential Improvement,100.0,Low-Confidence Scenario
+Wonka Bar - Fudge Mallows,1312.9392788677792,1527,24890.4,16593.6,Gulf,1304.5807560137457,243,8.358522854033481,0.64,Potential Improvement,100.0,Low-Confidence Scenario
