@@ -205,6 +205,10 @@ The machine learning model provides predictions based on historical data and sho
 \*\*Unified Mentor Data Analyst Internship\*\*
 
 
+## 📄 Research Paper
+
+[Download Research Paper](Nassau_Candy_Distributor_Research_Paper_Pravesh_Yadav.pdf)
+
 
 Developed using Python, Pandas, NumPy, Scikit-learn and Streamlit.
 
