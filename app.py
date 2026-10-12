@@ -28,9 +28,53 @@ st.title('🍫 Nassau Candy Distributor')
 st.subheader('Regional Reallocation & Shipping Optimization Dashboard')
 st.info('This dashboard uses historical product-region performance to simulate potential regional reallocation scenarios. The dataset does not contain an explicit factory identifier, so Region is used as the operational allocation dimension.')
 
-df['Order Date'] = pd.to_datetime(df['Order Date'], dayfirst=True)
-df['Ship Date'] = pd.to_datetime(df['Ship Date'], dayfirst=True)
-df['Lead Time'] = (df['Ship Date'] - df['Order Date']).dt.days
+
+# Check date parsing and lead-time data quality
+df['Order Date'] = pd.to_datetime(
+    df['Order Date'], dayfirst=True, errors='coerce'
+)
+df['Ship Date'] = pd.to_datetime(
+    df['Ship Date'], dayfirst=True, errors='coerce'
+)
+
+df['Lead Time'] = (
+    df['Ship Date'] - df['Order Date']
+).dt.days
+
+st.subheader("Lead Time Data Quality")
+
+col1, col2, col3 = st.columns(3)
+
+col1.metric(
+    "Invalid Order Dates",
+    int(df['Order Date'].isna().sum())
+)
+col2.metric(
+    "Invalid Ship Dates",
+    int(df['Ship Date'].isna().sum())
+)
+col3.metric(
+    "Negative Lead Times",
+    int((df['Lead Time'] < 0).sum())
+)
+
+st.write("Lead Time Statistics")
+st.dataframe(df['Lead Time'].describe().to_frame())
+
+st.write("10 Longest Shipments")
+st.dataframe(
+    df.nlargest(10, 'Lead Time')[
+        ['Order Date', 'Ship Date', 'Lead Time']
+    ]
+)
+
+st.write("Rows with Negative Lead Time")
+st.dataframe(
+    df[df['Lead Time'] < 0][
+        ['Order Date', 'Ship Date', 'Lead Time']
+    ]
+)
+
 
 total_orders = df['Order ID'].nunique()
 total_sales = df['Sales'].sum()
